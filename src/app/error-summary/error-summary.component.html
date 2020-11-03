@@ -1,0 +1,11 @@
+<!-- {{form.getControl(control).value}} -->
+
+<ng-container *ngIf="isNotValid">
+	<ng-container *ngIf="formControl.hasError('required')"> this is required </ng-container>
+	<ng-container *ngIf="formControl.hasError('email')">this not valid email format</ng-container>
+	<ng-container *ngIf="formControl.hasError('max')">max ...</ng-container>
+	<ng-container *ngIf="formControl.hasError('min')">min ...</ng-container>
+	<ng-container *ngIf="formControl.hasError('pattern')">haha it also worked ...</ng-container>
+</ng-container>
+
+<!-- {{formControl.errors | json}} -->
